@@ -33,7 +33,7 @@ void gs::NeuralNetwork::train(float* trainingSetInput, float* trainingSetOutput,
 > Trains the neural network parameters. The network parameters are set to best estimate the output samples with their corresponding input samples.
 #### Parameters
 + **float* trainingSetInput**: *Input training set. Training samples must be vectorized. i.e. array size is (inputSize)x(numTrainingSamples).*
-+ **float* trainingSetOutput**: *Iutput training set. Training samples must be vectorized. i.e. array size is (outputSize)x(numTrainingSamples).
++ **float* trainingSetOutput**: *Output training set. Training samples must be vectorized. i.e. array size is (outputSize)x(numTrainingSamples).
 + **size_t numTrainingSamples**: *Number of training samples.*
 
 
@@ -99,7 +99,7 @@ void gs::ConvolutionalNeuralNetwork::train(float* trainingSetInput, float* train
 > Trains the neural network parameters. The network parameters are set to best estimate the output samples with their corresponding input samples.
 #### Parameters
 + **float* trainingSetInput**: *Input training set. Training samples must be vectorized. i.e. array size is (inputSize)x(numTrainingSamples).*
-+ **float* trainingSetOutput**: *Iutput training set. Training samples must be vectorized. i.e. array size is (outputSize)x(numTrainingSamples).
++ **float* trainingSetOutput**: *Output training set. Training samples must be vectorized. i.e. array size is (outputSize)x(numTrainingSamples).
 + **size_t numTrainingSamples**: *Number of training samples.*
 
 
