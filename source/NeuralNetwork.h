@@ -1,3 +1,10 @@
+/*
+Fully Connected Neural Network, Convolutional Neural Network
+Greg Smith
+2017
+
+*/
+
 #pragma once
 
 
