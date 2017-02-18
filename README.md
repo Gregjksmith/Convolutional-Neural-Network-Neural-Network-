@@ -187,7 +187,7 @@ void main()
 	/* Create the vectorized training sets */
 	float* inputTrainingVector = createImageVector(trainingImages);
 	float* outputTrainingVector = createOutputVector(trainingLabels, OUTPUT_SIZE);
-	float* testOutput = new float[NUM_TRAINING_IMAGES * OUTPUT_SIZE];
+	float testOutput[NUM_TRAINING_IMAGES * OUTPUT_SIZE];
 
 
 	gs::ClContext* clContext = new gs::ClContext();
@@ -207,5 +207,12 @@ void main()
 	cnn->train(inputTrainingVector, outputTrainingVector, NUM_TRAINING_IMAGES);
 	cnn->predict(inputTrainingVector, testOutput, NUM_TRAINING_IMAGES);
 	float cnnRecognitionError = errorRate(testOutput, trainingLabels, OUTPUT_SIZE, NUM_TRAINING_IMAGES);
+
+	delete inputTrainingVector;
+	delete outputTrainingVector;
+	trainingImages.clear();
+	trainingLabels.clear();
+	delete nn;
+	delete cnn;
 }
 ```
