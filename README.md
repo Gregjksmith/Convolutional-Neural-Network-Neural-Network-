@@ -5,8 +5,6 @@ Presented is an open source implementation of a 2-layer fully connected Neural N
 
 ## API
 
-### gs::NeuralNetwork
-> 2-layer fully connected Neural Network. Network input size, output size and layer sizes are specified by the user.
 
 ```
 gs::NeuralNetwork::NeuralNetwork(gs::ClContext* context, size_t inputSize, 
@@ -14,6 +12,7 @@ gs::NeuralNetwork::NeuralNetwork(gs::ClContext* context, size_t inputSize,
 			size_t outputLayerSize, float learningRate, 
 			size_t minibatchSize, size_t epochs);
 ```
+> 2-layer fully connected Neural Network. Network input size, output size and layer sizes are specified by the user.
 #### Parameters
 **gs::ClContext* context**: *openCL context. Set context to NULL for automatic handling.*
 
@@ -32,6 +31,8 @@ gs::NeuralNetwork::NeuralNetwork(gs::ClContext* context, size_t inputSize,
 **size_t epochs**: *Total number of training iterations.*
 
 
+
+
 ```
 void gs::NeuralNetwork::train(float* trainingSetInput, float* trainingSetOutput, size_t numTrainingSamples);
 ```
@@ -43,6 +44,8 @@ void gs::NeuralNetwork::train(float* trainingSetInput, float* trainingSetOutput,
 **float* trainingSetOutput**: *Iutput training set. Training samples must be vectorized. i.e. array size is (outputSize)x(numTrainingSamples).
 
 **size_t numTrainingSamples**: *Number of training samples.*
+
+
 
 
 ```
@@ -58,6 +61,8 @@ void gs::NeuralNetwork::predict(float* inputVector, float* outputVector, size_t 
 **size_t numSamples**: *Number of samples to be predicted.*
 
 
+
+
 ```
 void gs::NeuralNetwork::exportNNParams(char* filePath);
 ```
@@ -65,6 +70,9 @@ void gs::NeuralNetwork::exportNNParams(char* filePath);
 #### Parameters
 
 **char* filePath**:*Export file location.*
+
+
+
 
 ```
 void gs::NeuralNetwork::importNNParams(char* filePath);
