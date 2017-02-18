@@ -8,8 +8,10 @@ Presented is an open source implementation of a 2-layer fully connected Neural N
 ### gs::NeuralNetwork
 > 2-layer fully connected Neural Network. Network input size, output size and layer sizes are specified by the user.
 
+```
 constructor **gs::NeuralNetwork::NeuralNetwork**(gs::ClContext* context, size_t inputSize, size_t activationLayer1Size, 
 	size_t activationLayer2Size, size_t outputLayerSize, float learningRate, size_t minibatchSize, size_t epochs);
+```
 
 #### Parameters
 **gs::ClContext* context**: *openCL context. Set context to NULL for automatic handling.*
