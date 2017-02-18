@@ -15,7 +15,7 @@ gs::NeuralNetwork::NeuralNetwork(gs::ClContext* context, size_t inputSize,
 ```
 > 2-layer fully connected Neural Network. Network input size, output size and layer sizes are specified by the user.
 #### Parameters
-+ **gs::ClContext* context**: *openCL context. Set context to NULL for automatic handling.*
++ **gs::ClContext* context**: *openCL context.*
 + **size_t inputSize**: *Number of input nodes.*
 + **size_t activationLayer1Size**: *Number hidden nodes in layer 1 of the network.*
 + **size_t activationLayer2Size**: *Number hidden nodes in layer 2 of the network.*
@@ -82,7 +82,7 @@ gs::ConvolutionalNeuralNetwork::ConvolutionalNeuralNetwork(ClContext* context, s
 ```
 > 6-layer convolutional neural network, based on the LeNet-5 architecture. Inputs are images of size with specified width and height.
 #### Parameters
-+ **gs::ClContext* context**: *openCL context. Set context to NULL for automatic handling.*
++ **gs::ClContext* context**: *openCL context.*
 + **size_t inputImageWidth**: *Input image width.*
 + **size_t inputImageHeight**: *Input image height.*
 + **size_t outputSize**: *number of output nodes.*
